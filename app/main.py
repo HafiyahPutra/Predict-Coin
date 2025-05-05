@@ -25,7 +25,7 @@ def predict():
 
         # Ambil data terakhir
         last = data[-1]  # Format: [timestamp, open, high, low, close]
-        df = pd.DataFrame([last[1:5]], columns=["open", "high", "low", "close"])
+        df = pd.DataFrame([last[1:5]], columns=["open", "high", "low"])
 
         # Prediksi
         pred = model.predict(df)[0]
